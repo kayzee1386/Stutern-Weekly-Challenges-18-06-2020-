@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <html lang="en">
+<head>
+  <meta charset="utf-8">
+</head>
+
+  <body>
+     <h2>My Favourite Git Command</h2>
+     <h4>I love "git branch"</h4>
+     <br>
+     <article>
+     Branching is most advisable when you're working or collaborating with a team or when you want to go off on your own and work on some experimental new feature? It would be nice if you could do so without worrying about breaking the code for everyone else, or conflicting with things that other people are working on.<br>
+     In most modern work flows, we do not do all of our work on a single branch. Instead, we usually have many different branches for certain use cases (bug fixes, new features, deployment), so it's essential to understand how to create, delete, and merge branches.
+     </article>
+
+     <p><strong>Flags or arguments of 'git branch' and their usage are;</strong></p>
+     <nav>
+        <ol>
+          <li>"-a" flag will make sure remote branches are also included in the list.</li>
+          <li>"-v" flag will make the command more "verbose" and include SHA-1 hashes as well as commit subjects of the latest commits on your branches.</li>
+          <li>"--no-merged" flag returns all branches that have not been merged into your current HEAD branch. This helps you understand which changes haven't been integrated into your current working context, yet.</li>
+          <li>"--merged" flag helps to request for all branches that already have been merged in your current HEAD.</li>
+          <li>"-d" flag deletes a specified branch.
+          If the specified branch hasn't been fully merged yet, you'll have to use the capital "-D" flag. Be careful with this, though: deleting branches that contain unmerged data shouldn't be done lightly.<br>
+          NB: If you want to delete a remote branch, add the "-r" flag in addition to "-d".</li>
+        </ol>
+     </nav>
+     <div>
+     <h4>Below are output of some of its usage;</h4>
+     <h5>"-a" flag usage</h5>
+     <pre>
+       <code>user@user-PC MINGW64 ~/desktop (master)
+       $ git branch -a
+       * master
+       </code>
+     </pre>
+     <h5>"-v" flag usage</h5>
+     <pre>
+       <code>user@user-PC MINGW64 ~/desktop (master)
+       $ git branch -v
+       * * master a5fbe5e first.txt
+       </code>
+     </pre>
+     <h5>"--no-merged" flag usage</h5>
+     <pre>
+       <code>user@user-PC MINGW64 ~/desktop (master)
+       $ git branch --no-merged
+         feature
+       </code>
+     </pre>
+     <h5>"--merged" flag usage</h5>
+     <pre>
+       <code>user@user-PC MINGW64 ~/desktop (master)
+        $ git branch --merged
+            feature
+          * master
+       </code>
+     </pre>
+     <h5>"-d" flag usage</h5>
+     <pre>
+       <code>user@user-PC MINGW64 ~/desktop (master)
+        $ git branch -d feature
+        Deleted branch feature (was a5fbe5e).
+       </code>
+     </pre>
+     </div>
+
+     <img src="./snapshot.jpg" Alt="snapshot" width="150" height="150">
+  </body>
+
+</html>
